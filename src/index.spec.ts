@@ -32,6 +32,14 @@ describe("Tests the public API", () => {
     expect(filetypeinfo(bytes)[0].mime).toBe("video/mp4");
   });
 
+  it("detects jpg", () => {
+    const buffer = fs.readFileSync(require.resolve("./testfiles/a.jpg"));
+    const bytes = Array.prototype.slice.call(buffer, 0);
+    expect(filetypeinfo(bytes)).toHaveLength(1);
+    expect(filetypeinfo(bytes)[0].typename).toBe("jpg");
+    expect(filetypeinfo(bytes)[0].mime).toBe("image/jpeg");
+  });
+
   it("filetypeinfo", () => {
     const bytes = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
     expect(filetypeinfo(bytes)).toHaveLength(2);

@@ -70,6 +70,10 @@ add("jpg", ["0xFF", "0xD8", "0xFF", "0xDB"], {
   mime: "image/jpeg",
   extension: "jpeg",
 });
+add("jpg", ["0xFF", "0xD8", "0xFF", "0xE0"], {
+  mime: "image/jpeg",
+  extension: "jpeg",
+});
 add(
   "jpg",
   [
@@ -106,6 +110,10 @@ add(
   ],
   { mime: "image/jpeg", extension: "jpeg" }
 );
+add("jpg", ["0xFF", "0xD8", "0xFF", "0xEE"], {
+  mime: "image/jpeg",
+  extension: "jpeg",
+});
 
 add(
   "webp",
@@ -154,7 +162,7 @@ add("ytr", ["0x00"]);
 // 6D703432
 add(
   "mp4",
-  ["0x66", "0x74", "0x79", "0x70" ],
+  ["0x66", "0x74", "0x79", "0x70"],
   { mime: "video/mp4", extension: "mp4" },
   0x4
 );
@@ -695,6 +703,8 @@ add(
 );
 
 add("mp3", ["0xFF", "0xFB"], { mime: "audio/mpeg", extension: "mp3" });
+add("mp3", ["0xFF", "0xF3"], { mime: "audio/mpeg", extension: "mp3" });
+add("mp3", ["0xFF", "0xF2"], { mime: "audio/mpeg", extension: "mp3" });
 add("mp3", ["0x49", "0x44", "0x33"], { mime: "audio/mpeg", extension: "mp3" });
 
 add("bmp", ["0x42", "0x4D"], { mime: "image/bmp", extension: "bmp" });
