@@ -66,11 +66,7 @@ add("gif", ["0x47", "0x49", "0x46", "0x38", "0x39", "0x61"], {
   extension: "gif",
 });
 
-add("jpg", ["0xFF", "0xD8", "0xFF", "0xDB"], {
-  mime: "image/jpeg",
-  extension: "jpeg",
-});
-add("jpg", ["0xFF", "0xD8", "0xFF", "0xE0"], {
+add("jpg", ["0xFF", "0xD8", "0xFF"], {
   mime: "image/jpeg",
   extension: "jpeg",
 });
@@ -110,10 +106,6 @@ add(
   ],
   { mime: "image/jpeg", extension: "jpeg" }
 );
-add("jpg", ["0xFF", "0xD8", "0xFF", "0xEE"], {
-  mime: "image/jpeg",
-  extension: "jpeg",
-});
 
 add(
   "webp",
